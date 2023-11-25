@@ -1,4 +1,5 @@
 {
+  "main": "main.js",
   "license": "GPL-3.0",
   "scripts": {
     "start": "concurrently --names \"vite,azure-fn-dev\" -c \"bgBlue,bgMagenta\" \"npm run dev\" \"npm --prefix api start\"",
@@ -10,7 +11,8 @@
     "build:azure": "npm run refresh-kbs && npm run build",
     "preview": "vite preview",
     "build:kbs": "via-keyboards public/definitions",
-    "find-deadcode": "ts-prune"
+    "find-deadcode": "ts-prune",
+    "start-electron": "electron ."
   },
   "engines": {
     "node": ">=18.0.0"
@@ -62,6 +64,7 @@
     "@types/wicg-file-system-access": "^2020.9.5",
     "@vitejs/plugin-react": "^3.1.0",
     "concurrently": "^7.6.0",
+    "electron": "^27.1.2",
     "husky": "^8.0.3",
     "ts-node": "^10.9.1",
     "ts-prune": "^0.10.3",
